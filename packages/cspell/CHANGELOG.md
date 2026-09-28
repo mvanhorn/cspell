@@ -587,6 +587,27 @@ These changes lay the groundwork for parsers and other tools to annotate text wi
 
 </details>
 
+## v10.3.6 (2026-09-28)
+
+### Fixes
+
+<details>
+<summary>fix: `--show-perf-summary` shows where all of the run's time goes (<a href="https://github.com/streetsidesoftware/cspell/pull/9307">#9307</a>)</summary>
+
+### fix: `--show-perf-summary` shows where all of the run's time goes ([#9307](https://github.com/streetsidesoftware/cspell/pull/9307))
+
+## Summary
+
+`--show-perf-summary` now accounts for all of Total Time. Before, about a sixth of it wasn't shown anywhere. Three new lines, together with Processing Time, add up to Total Time:
+
+- **Setup Time:** before the first file is checked: loading configuration and finding files.
+- **Between Files:** between one file and the next: deciding whether to check it, and reading it.
+- **Other Time:** everything else.
+
+---
+
+</details>
+
 ## v10.3.5 (2026-09-27)
 
 ### Fixes
